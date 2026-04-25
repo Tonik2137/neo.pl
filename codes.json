@@ -1,19 +1,19 @@
 {
   "codes": [
     {
-      "Kod": "7AB13",
+      "Kod": "START10",
       "Dni": 10,
       "Plan": "PRO",
       "Wygasniecie": "2026-04-24",
-      "max_users": 1,
+      "max_users": 10,
       "current_users": 0
     },
     {
       "Kod": "PLUS30",
       "Dni": 30,
-      "Plan": "PLUS",
+      "Plan": "PRO",
       "Wygasniecie": "2026-12-31",
-      "max_users": 1,
+      "max_users": 10000,
       "current_users": 0
     },
     {
