@@ -1,0 +1,12 @@
+{
+  "admins": [
+    {
+      "email": "admin",
+      "role": "SECRET_ADMIN"
+    },
+    {
+      "email": "kebsik2023@gmail.com",
+      "role": "SECRET_ADMIN"
+    }
+  ]
+}
