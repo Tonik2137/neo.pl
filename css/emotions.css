@@ -1,0 +1,109 @@
+/* NeoAI Premium Emotion Engine */
+
+/* Gniew - Red Pulse */
+body[data-aura="gniew"] .app {
+  background: radial-gradient(circle at 30% 30%, rgba(244,63,94,0.35), transparent 28%),
+              radial-gradient(circle at 70% 60%, rgba(220,38,38,0.22), transparent 24%),
+              radial-gradient(circle at 50% 50%, rgba(153,27,27,0.18), transparent 20%),
+              var(--bg);
+  animation: anger-pulse 1.5s ease-in-out infinite alternate;
+}
+@keyframes anger-pulse {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  100% { filter: hue-rotate(-10deg) brightness(1.08); }
+}
+body[data-aura="gniew"] .composer-card {
+  border-color: rgba(244,63,94,0.45);
+  box-shadow: 0 0 40px rgba(244,63,94,0.18), var(--shadow);
+}
+body[data-aura="gniew"] .message.assistant .bubble {
+  color: #ffe4e6; font-weight: 600;
+}
+
+/* Smutek - Gray Blue Rain */
+body[data-aura="smutek"] .app {
+  background: radial-gradient(circle at 25% 25%, rgba(100,116,139,0.28), transparent 24%),
+              radial-gradient(circle at 60% 50%, rgba(71,85,105,0.22), transparent 22%),
+              radial-gradient(circle at 80% 35%, rgba(51,65,85,0.18), transparent 20%),
+              var(--bg);
+}
+body[data-aura="smutek"] .composer-card {
+  border-color: rgba(100,116,139,0.35);
+}
+body[data-aura="smutek"] .message.assistant .bubble {
+  color: #cbd5e1;
+}
+body[data-aura="smutek"] .topbar,
+body[data-aura="smutek"] .sidebar {
+  border-color: rgba(100,116,139,0.25);
+}
+body[data-aura="smutek"]::before {
+  content: ""; position: fixed; inset: 0;
+  pointer-events: none; z-index: 5;
+  background: repeating-linear-gradient(180deg, transparent, transparent 20px, rgba(148,163,184,0.04) 20px, rgba(148,163,184,0.04) 21px);
+  animation: rain-fall 12s linear infinite;
+}
+@keyframes rain-fall {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 120px; }
+}
+
+/* Tear drop */
+.tear-overlay {
+  position: fixed; top: -20px; left: 50%;
+  width: 14px; height: 24px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: linear-gradient(180deg, rgba(148,163,184,0.35), rgba(148,163,184,0.08));
+  transform: translateX(-50%); pointer-events: none; z-index: 6;
+  opacity: 0; transition: opacity 0.5s ease;
+}
+body[data-aura="smutek"] .tear-overlay {
+  opacity: 1; animation: tear-drop 4s ease-in infinite;
+}
+@keyframes tear-drop {
+  0% { top: -20px; opacity: 0; transform: translateX(-50%) scale(0.6); }
+  15% { opacity: 1; transform: translateX(-50%) scale(1); }
+  85% { opacity: 0.6; }
+  100% { top: 80vh; opacity: 0; transform: translateX(-50%) scale(0.5); }
+}
+
+/* Radość / Świętowanie */
+body[data-aura="radość"] .app {
+  background: radial-gradient(circle at 18% 28%, rgba(22,199,255,0.28), transparent 24%),
+              radial-gradient(circle at 64% 34%, rgba(255,216,97,0.16), transparent 18%),
+              radial-gradient(circle at 76% 42%, rgba(241,70,255,0.2), transparent 22%),
+              var(--bg);
+}
+body[data-aura="świętowanie"] .app {
+  background: radial-gradient(circle at 16% 22%, rgba(250,204,21,0.24), transparent 22%),
+              radial-gradient(circle at 30% 44%, rgba(22,199,255,0.26), transparent 24%),
+              radial-gradient(circle at 76% 34%, rgba(241,70,255,0.24), transparent 22%),
+              var(--bg);
+}
+
+/* Listening */
+body[data-aura="listening"] .app {
+  background: radial-gradient(circle at 22% 24%, rgba(123,92,255,0.24), transparent 22%),
+              radial-gradient(circle at 72% 38%, rgba(241,70,255,0.22), transparent 20%),
+              radial-gradient(circle at 46% 62%, rgba(22,199,255,0.18), transparent 24%),
+              var(--bg);
+  animation: aura-float 8s ease-in-out infinite alternate;
+}
+@keyframes aura-float {
+  0% { filter: saturate(1) brightness(1); }
+  50% { filter: saturate(1.08) brightness(1.03); }
+  100% { filter: saturate(1.14) brightness(1.06); }
+}
+
+/* Premium Bubbles */
+.message.user .bubble,
+.message.assistant .bubble {
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(16,20,42,0.12);
+}
+
+/* Glassmorphism for promo */
+.promo-box {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
