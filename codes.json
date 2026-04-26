@@ -8,6 +8,14 @@
       "max_users": 10,
       "current_users": 0
     },
+        {
+      "Kod": "Adm1n",
+      "Dni": 80,
+      "Plan": "PRO",
+      "Wygasniecie": "2026-12-31",
+      "max_users": 1000,
+      "current_users": 0
+    },
     {
       "Kod": "B0pys",
       "Dni": 30,
